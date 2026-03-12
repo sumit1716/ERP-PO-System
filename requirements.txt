@@ -1,0 +1,33 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+
+# ERP Purchase Order Management System
+
+## Project Overview
+[cite_start]This is a micro-service based Purchase Order (PO) Management System built as part of the IV Innovations assignment[cite: 3, 5]. It manages Vendors, Products, and Purchase Orders with an integrated AI feature for product descriptions.
+
+## Tech Stack
+- [cite_start]**Backend:** Python (FastAPI) [cite: 8, 9]
+- [cite_start]**Database:** PostgreSQL [cite: 8, 10]
+- [cite_start]**Frontend:** HTML5, CSS3, Bootstrap, and jQuery [cite: 15, 18]
+- [cite_start]**AI Integration:** Google Gemini API (for Auto-Descriptions) [cite: 20, 22]
+
+## Database Design Logic
+[cite_start]The database consists of three primary related tables[cite: 10]:
+1. [cite_start]**Vendors:** Stores vendor details like Name, Contact, and Rating[cite: 11].
+2. [cite_start]**Products:** Stores inventory items with SKU and Unit Price[cite: 12].
+3. [cite_start]**PurchaseOrders:** Stores order details linked to Vendors via Foreign Keys[cite: 13, 23].
+
+## Key Features
+- [cite_start]**5% Tax Calculation:** The system automatically applies a 5% tax to the subtotal of any created PO.
+- [cite_start]**Dynamic UI:** Users can add multiple product rows to a single order dynamically[cite: 18].
+- [cite_start]**AI Smart Element:** A "✨" button next to products generates a 2-sentence marketing description using Generative AI[cite: 21, 22].
+
+## How to Run
+1. [cite_start]**Database:** Run the provided `.sql` script in pgAdmin to create tables.
+2. **Backend:** - Install dependencies: `pip install -r requirements.txt`
+   - Run server: `uvicorn main:app --reload`
+3. [cite_start]**Frontend:** Open `index.html` in any modern web browser[cite: 15].
